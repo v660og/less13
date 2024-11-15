@@ -72,6 +72,10 @@ if __name__ == "__main__":
     print(find_key("o3zR v..D0?yRA0R8FR8v47w0ER4.R1WdC!sLF5D"))
 
     cryptor = CaesarsCipher(3)
+    dst_path = input('Введите путь к файлу: ')
 
     print(cryptor.encrypt("The vacation was a success"))
     print(cryptor.decrypt("Wkh.ydfdwlrq.zdv.d.vxffhvv"))
+
+    with open(dst_path, 'w') as file:
+        file.write(cryptor.decrypt("Wkh.ydfdwlrq.zdv.d.vxffhvv"))
